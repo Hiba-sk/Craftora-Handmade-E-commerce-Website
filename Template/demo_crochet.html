@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crochet Collection | Craftora</title>
+  <link rel="stylesheet" href="demo_style.css">
+</head>
+<body>
+
+<section class="shop-header julia-bg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<div class="cart-icon-wrapper" id="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cartCount">0</span>
+</div>
+  <div class="header-content">
+    <h1 class="serif-title">Crochet Collection</h1>
+    <p class="subtitle">Handmade with love • Artisanal Quality</p>
+  </div>
+</section>
+
+<section class="shop-products">
+  <div class="product-card" onclick="openModal('Crochet Bunny Keychain', '€20,00 EUR', 'images/Crochet bunny.jpeg', 'This handmade crochet teddy is crafted with premium soft yarn. Perfect for gifting, home decor, and kids. Lightweight, durable, and made with love to bring warmth and comfort.')">
+    <img src="images/Crochet bunny.jpeg">
+    <h3>Crochet Bunny</h3>
+    <p>€20,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Mini Drawstring Bag', '€15,00 EUR', 'images/ds2.png', 'Handmade crochet drawstring bag, perfect for carrying small essentials. Crafted with soft yarn, it features a secure drawstring closure.')">
+    <img src="images/ds2.png">
+    <h3>Mini Drawstring Bag</h3>
+    <p>€15,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Tote Bag', '€18,00 EUR', 'images/bag.jpeg', 'Handmade crochet tote bag, perfect for carrying essentials. Crafted with soft yarn, it features a spacious interior and sturdy handles.')">
+    <img src="images/bag.jpeg">
+    <h3>Tote Bag</h3>
+    <p>€18,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Infinit Throw Blanket', '€25,00 EUR', 'images/blanket1.jpeg', 'This is a handmade soft crochet throw blanket, perfect for adding warmth and style to your living space.')">
+    <img src="images/blanket1.jpeg">
+    <h3>Infinit Throw Blanket</h3>
+    <p>€25,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Sunflower Make-up Pouch', '€16,00 EUR', 'images/makeup (1).png', 'It is a handmade sunflower make-up pouch is crafted with premium soft yarn. Perfect for gifting, home decor, and kids. Lightweight, durable, and made with love to bring warmth and comfort.')">
+    <img src="images/makeup (1).png">
+    <h3>Sunflower Make-up Pouch</h3>
+    <p>€16,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Flower Coaster', '€12,00 EUR', 'images/makeup (2).png', 'It is a handmade flower coaster crafted with premium soft yarn. Perfect for gifting, home decor, and kids. Lightweight, durable, and made with love to bring warmth and comfort.')">
+    <img src="images/makeup (2).png">
+    <h3>Flower Coaster</h3>
+    <p>€12,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Boho Crochet Tote Bag', '€30,00 EUR', 'images/makeup (3).png', 'It is a handmade boho crochet tote bag, perfect for adding warmth and style to your living space.')">
+    <img src="images/makeup (3).png">
+    <h3>Boho Crochet Tote Bag</h3>
+    <p>€30,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Bag Charms', '€15,00 EUR', 'images/kc.jpeg', 'It is a handmade bag charms crafted with premium soft yarn. Perfect for gifting, home decor, and kids. Lightweight, durable, and made with love to bring warmth and comfort.')">
+    <img src="images/kc.jpeg">
+    <h3>Bag Charms</h3>
+    <p>€15,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+</section>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <div class="modal-body">
+      <div class="modal-image-side">
+        <img id="modal-img">
+      </div>
+
+      <div class="modal-info-side custom-scroll">
+        <span class="brand-tag">CRAFTORA</span>
+        <h2 id="modal-name" class="serif-title"></h2>
+        <p id="modal-price" class="price-tag"></p>
+        <p class="tax-info">Taxes included.</p>
+
+        <div class="options-container">
+          <label>Material</label>
+          <div class="material-options">
+            <button class="opt-btn active">Premium Yarn</button>
+            <button class="opt-btn">Cotton</button>
+          </div>
+        </div>
+
+        <div class="quantity-section">
+          <label>Quantity</label>
+          <div class="quantity-box">
+            <button onclick="decreaseQty()">−</button>
+            <span id="qty">1</span>
+            <button onclick="increaseQty()">+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-add-cart" onclick="addToCart()">ADD TO CART</button>
+          <button class="btn-buy-now" onclick="window.location.href='order.html'">BUY IT NOW</button>        </div>
+
+        <div class="trust-badges">
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>For Sensitive Skin</span></div>
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>100% Handmade</span></div>
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>Free Shipping</span></div>
+        </div>
+
+        <p id="modal-desc" class="product-desc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Shopping Bag</h2>
+        <button id="close-cart" class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div id="cartItems" class="cart-body">
+        </div>
+
+    <div class="cart-footer">
+        <div class="subtotal">
+            <span>Subtotal</span>
+            <span id="cartTotal">€0.00 EUR</span>
+        </div>
+        <p class="shipping-note">Shipping & taxes calculated at checkout.</p>
+        <button class="checkout-btn" onclick="location.href='order.html'">Checkout Now</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

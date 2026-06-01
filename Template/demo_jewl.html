@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beaded Jewellery Collection | Craftora</title>
+  <link rel="stylesheet" href="demo_style.css">
+</head>
+<body>
+
+<section class="shop-header julia-bg">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <div class="cart-icon-wrapper" id="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cartCount">0</span>
+</div>
+   <div class="header-content">
+    <h1 class="serif-title">Beaded Jewellery Collection</h1>
+    <p class="subtitle">Handmade with love • Artisanal Quality</p>
+  </div>
+</section>
+
+<section class="shop-products">
+  <div class="product-card" onclick="openModal('Stone Bracelet', '€20,00 EUR', 'images/bj1 (1).png', 'This is a stone bracelet. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bj1 (1).png">
+    <h3>Stone Bracelet</h3>
+    <p>€20,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Beaded Bracelet', '€15,00 EUR', 'images/bj1 (2).png', 'This is a beaded bracelet. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bj1 (2).png">
+    <h3>Beaded Bracelet</h3>
+    <p>€15,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Beaded Pendant', '€18,00 EUR', 'images/bj1 (3).png', 'This is a beaded pendant. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bj1 (3).png">
+    <h3>Beaded Pendant</h3>
+    <p>€18,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Beaded Necklace', '€18,00 EUR', 'images/beaded jewlery.png', 'This is a beaded necklace. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/beaded jewlery.png">
+    <h3>Beaded Necklace</h3>
+    <p>€18,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Beaded Rings', '€9,00 EUR', 'images/bead (1).jpeg', 'This is a set of beaded rings. They are handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bead (1).jpeg">
+    <h3>Seed Beads Rings</h3>
+    <p>€9,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Clay Beads Bracelet', '€12,00 EUR', 'images/clay beads bracelet.png', 'This is a clay beads bracelet. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bead (2).jpeg">
+    <h3>Clay Beads Bracelet</h3>
+    <p>€12,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Beach Bead Necklace', '€9,00 EUR', 'images/bead (3).jpeg', 'This is a beach bead necklace. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bead (3).jpeg">
+    <h3>Beach Bead Necklace</h3>
+    <p>€9,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Beaded Earrings', '€12,00 EUR', 'images/bead (4).jpeg', 'This is a beaded earrings. It is handmade with love and perfect for adding a touch of elegance to your accessory collection.')">
+    <img src="images/bead (4).jpeg">
+    <h3>Beaded Earrings</h3>
+    <p>€12,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+</section>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <div class="modal-body">
+      <div class="modal-image-side">
+        <img id="modal-img">
+      </div>
+
+      <div class="modal-info-side custom-scroll">
+        <span class="brand-tag">CRAFTORA</span>
+        <h2 id="modal-name" class="serif-title"></h2>
+        <p id="modal-price" class="price-tag"></p>
+        <p class="tax-info">Taxes included.</p>
+
+        <div class="options-container">
+          <label>Material</label>
+          <div class="material-options">
+            <button class="opt-btn active">Crystal Beads</button>
+            <button class="opt-btn">Wooden Beads</button>
+          </div>
+        </div>
+
+        <div class="quantity-section">
+          <label>Quantity</label>
+          <div class="quantity-box">
+            <button onclick="decreaseQty()">−</button>
+            <span id="qty">1</span>
+            <button onclick="increaseQty()">+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-add-cart" onclick="addToCart()">ADD TO CART</button>
+            <button class="btn-buy-now" onclick="window.location.href='order.html'">BUY IT NOW</button>        </div>
+
+        <div class="trust-badges">
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>For Sensitive Skin</span></div>
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>100% Handmade</span></div>
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>Free Shipping</span></div>
+        </div>
+
+        <p id="modal-desc" class="product-desc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Shopping Bag</h2>
+        <button id="close-cart" class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div id="cartItems" class="cart-body">
+        </div>
+
+    <div class="cart-footer">
+        <div class="subtotal">
+            <span>Subtotal</span>
+            <span id="cartTotal">€0.00 EUR</span>
+        </div>
+        <p class="shipping-note">Shipping & taxes calculated at checkout.</p>
+        <button class="checkout-btn" onclick="location.href='order.html'">Checkout Now</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

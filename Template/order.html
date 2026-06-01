@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Craftora Modern Crochet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --julia-taupe: #4A3728;
+            --brand-tan: #baa98c; /* Your specific background color */
+            --forest-green: #4a5d4e; /* Darker version of the green inspo */
+            --muted-rose: #b57a74;   /* Darker version of the pink inspo */
+            --deep-slate: #3d4a5e;   /* Darker version of the blue inspo */
+            --glass-white: rgba(255, 255, 255, 0.92);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            min-height: 100vh;
+            background-color: var(--brand-tan);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- DARK SWIRL DECORATIONS --- */
+        .swirl {
+            position: fixed;
+            z-index: -1;
+            filter: blur(60px); /* Deeper blur for a smoother dark transition */
+            opacity: 0.6;
+            border-radius: 50%;
+        }
+
+        .swirl-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--deep-slate);
+            top: -150px;
+            left: -100px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        .swirl-2 {
+            width: 400px;
+            height: 600px;
+            background: var(--forest-green);
+            top: 10%;
+            right: -150px;
+            border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+        }
+
+        .swirl-3 {
+            width: 600px;
+            height: 500px;
+            background: var(--muted-rose);
+            bottom: -200px;
+            left: 10%;
+            border-radius: 80% 20% 50% 50% / 50% 50% 20% 80%;
+        }
+
+        /* --- THE CONTUR LINE (Inspired by your wallpaper) --- */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-100 500 C 200 100 800 900 1100 500' stroke='black' stroke-width='2' fill='transparent'/%3E%3C/svg%3E");
+            background-size: 1200px;
+        }
+
+        .checkout-wrapper {
+            max-width: 1100px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 40px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Standardized Glass Panels */
+        .checkout-form-side, .order-summary-side {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            padding: 40px;
+        }
+
+        .order-summary-side {
+            padding: 30px;
+            height: fit-content;
+            position: sticky;
+            top: 30px;
+        }
+
+        .serif-title {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--julia-taupe);
+            font-weight: 600;
+        }
+
+        .section-header {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding-bottom: 10px;
+            margin-top: 35px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--julia-taupe);
+            box-shadow: 0 0 0 4px rgba(74, 55, 40, 0.1);
+        }
+
+        .btn-complete {
+            width: 100%;
+            background: var(--julia-taupe);
+            color: white;
+            border: none;
+            padding: 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.4s;
+        }
+
+        .btn-complete:hover {
+            background: #36281d;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .total-row {
+            border-top: 2px solid #eee;
+            margin-top: 20px;
+            padding-top: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--julia-taupe);
+        }
+
+        @media (max-width: 850px) {
+            .checkout-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="swirl swirl-1"></div>
+    <div class="swirl swirl-2"></div>
+    <div class="swirl swirl-3"></div>
+
+    <div class="checkout-wrapper">
+        <div class="checkout-form-side">
+            <h1 class="serif-title" style="margin-top:0; font-size: 2.8rem;">Checkout</h1>
+            <form id="checkoutForm">
+                <div class="section-header serif-title">1. Contact Information</div>
+                <div class="input-row">
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+
+                <div class="section-header serif-title">2. Shipping Address</div>
+                <div class="input-row">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <input type="text" placeholder="Address" style="margin-bottom:15px;" required>
+                <div class="input-row">
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Postcode / Eircode" required>
+                </div>
+
+                <div style="margin-top:25px; display:flex; gap:12px; font-size:13px; color:#555;">
+                    <input type="checkbox" required>
+                    <label>I confirm my details are correct and I agree to the Craftora quality guarantee.</label>
+                </div>
+
+                <button type="submit" class="btn-complete">Place Order</button>
+            </form>
+        </div>
+
+        <div class="order-summary-side">
+            <h2 class="serif-title" style="margin:0 0 20px;">Your Selection</h2>
+            <div id="summary-items"></div>
+            <div class="total-row serif-title">
+                <span>Grand Total</span>
+                <span id="final-total">€0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadOrderData() {
+            const cart = JSON.parse(localStorage.getItem('craftora_cart')) || [];
+            const container = document.getElementById('summary-items');
+            const totalEl = document.getElementById('final-total');
+            let total = 0;
+            container.innerHTML = "";
+
+            cart.forEach(item => {
+                const price = parseFloat(item.priceRaw.replace(/[^\d.]/g, ''));
+                total += price * item.qty;
+                container.innerHTML += `
+                    <div class="summary-item">
+                        <span>${item.name} (x${item.qty})</span>
+                        <span>${item.priceRaw}</span>
+                    </div>`;
+            });
+            totalEl.innerText = `€${total.toFixed(2)}`;
+        }
+
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Order Success! Thank you for supporting Craftora.");
+            localStorage.removeItem('craftora_cart');
+            window.location.href = "index.html";
+        });
+
+        window.onload = loadOrderData;
+    </script>
+</body>
+</html>

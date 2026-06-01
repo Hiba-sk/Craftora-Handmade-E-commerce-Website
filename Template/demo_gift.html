@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handmade Gift Card Collection | Craftora</title>
+  <link rel="stylesheet" href="demo_style.css">
+</head>
+<body>
+
+<section class="shop-header julia-bg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <div class="cart-icon-wrapper" id="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cartCount">0</span>
+</div>
+    <div class="header-content">
+    <h1 class="serif-title">Gift Card Collection</h1>
+    <p class="subtitle">Handmade with love • Artisanal Quality</p>
+  </div>
+</section>
+
+<section class="shop-products">
+  <div class="product-card" onclick="openModal('Leaf Painted Gift Card', '€20,00 EUR', 'images/gift card.png', 'That is a leaf painted gift card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/gift card.png">
+    <h3>Leaf Painted Gift Card</h3>
+    <p>€20,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Retro Gift Card', '€15,00 EUR', 'images/bdc1.png', 'This is a retro gift card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/bdc1.png">
+    <h3>Retro Gift Card</h3>
+    <p>€15,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Threaded Gift Card', '€18,00 EUR', 'images/bdc2.png', 'This is a threaded gift card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/bdc2.png">
+    <h3>Threaded Gift Card</h3>
+    <p>€18,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Dried Flower Gift Card', '€18,00 EUR', 'images/bdc3.png', 'This is a dried flower gift card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/bdc3.png">
+    <h3>Dried Flower Gift Card</h3>
+    <p>€18,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Mini Thankyou Card', '€5,00 EUR', 'images/mini (1).png', 'This is a mini thank you card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/mini (1).png">
+    <h3>Mini Thankyou Card</h3>
+    <p>€5,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Floral Greeting Card', '€8,00 EUR', 'images/mini (2).png', 'This is a floral greeting card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/mini (2).png">
+    <h3>Floral Greeting Card</h3>
+    <p>€8,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('Quilling Greeting Card', '€10,00 EUR', 'images/quil.png', 'This is a quilling greeting card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/quil.png">
+    <h3>Quilling Greeting Card</h3>
+    <p>€10,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+
+  <div class="product-card" onclick="openModal('3D Birthday Card', '€7,00 EUR', 'images/3d.png', 'This is a 3D birthday card. It is handmade with love and perfect for giving as a thoughtful gift.')">
+    <img src="images/3d.png">
+    <h3>3D Birthday Card</h3>
+    <p>€7,00 EUR</p>
+    <button class="btn-choose">Choose options</button>
+  </div>
+</section>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <div class="modal-body">
+      <div class="modal-image-side">
+        <img id="modal-img">
+      </div>
+
+      <div class="modal-info-side custom-scroll">
+        <span class="brand-tag">CRAFTORA</span>
+        <h2 id="modal-name" class="serif-title"></h2>
+        <p id="modal-price" class="price-tag"></p>
+        <p class="tax-info">Taxes included.</p>
+
+        <div class="options-container">
+          <label>Material</label>
+          <div class="material-options">
+            <button class="opt-btn active">High Quality Paper</button>
+            <button class="opt-btn">Recycled Paper</button>
+          </div>
+        </div>
+
+        <div class="quantity-section">
+          <label>Quantity</label>
+          <div class="quantity-box">
+            <button onclick="decreaseQty()">−</button>
+            <span id="qty">1</span>
+            <button onclick="increaseQty()">+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-add-cart" onclick="addToCart()">ADD TO CART</button>
+        <button class="btn-buy-now" onclick="window.location.href='order.html'">BUY IT NOW</button>        </div>
+
+        <div class="trust-badges">
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>For Sensitive Skin</span></div>
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>100% Handmade</span></div>
+          <div class="badge-item"><input type="checkbox" checked disabled> <span>Free Shipping</span></div>
+        </div>
+
+        <p id="modal-desc" class="product-desc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Shopping Bag</h2>
+        <button id="close-cart" class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div id="cartItems" class="cart-body">
+        </div>
+
+    <div class="cart-footer">
+        <div class="subtotal">
+            <span>Subtotal</span>
+            <span id="cartTotal">€0.00 EUR</span>
+        </div>
+        <p class="shipping-note">Shipping & taxes calculated at checkout.</p>
+        <button class="checkout-btn" onclick="location.href='order.html'">Checkout Now</button>
+    </div>
+</div><div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Your Shopping Bag</h2>
+        <button id="close-cart" class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div id="cartItems" class="cart-body">
+        </div>
+
+    <div class="cart-footer">
+        <div class="subtotal">
+            <span>Subtotal</span>
+            <span id="cartTotal">€0.00 EUR</span>
+        </div>
+        <p class="shipping-note">Shipping & taxes calculated at checkout.</p>
+        <button class="checkout-btn" onclick="location.href='order.html'">Checkout Now</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
