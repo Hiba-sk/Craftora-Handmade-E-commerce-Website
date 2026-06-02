@@ -1,0 +1,2229 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+/* NEW TOP LEFT BRANDING */
+.header-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 80px; /* Increased top padding for a cleaner look */
+  display: flex;
+  align-items: center;
+  gap: 25px; /* More space between logo and text */
+  z-index: 10;
+}
+
+.brand-logo {
+  height: 90px; /* Increased logo size */
+  width: auto;   /* Maintains rectangular aspect ratio */
+  border-radius: 4px; /* Slight rounding for a professional "sticker" look */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  object-fit: contain;
+}
+
+.brand-name-cursive {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 4rem; /* Significantly increased text size */
+  color: #ffffff; 
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds depth to the larger text */
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  position: relative;
+  /* BACKGROUND IMAGE + DARK OVERLAY */
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url('images/crochet.jpg') center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  color: white;
+}
+
+/* CONTENT */
+.hero-content {
+  max-width: 600px;
+  margin-top: 100px; 
+}
+
+/* TAG */
+.tag {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* HEADING */
+.hero h1 {
+  font-size: 60px;
+  margin: 20px 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+/* BRAND COLOR ACCENT */
+.hero h1 span {
+  color: #b04e8c; /* Updated to your new brand tan/gold color */
+}
+
+/* PARAGRAPH */
+.hero p {
+  color: #ddd;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: linear-gradient(45deg, #d946ef, #a855f7); /* Julia Taupe Brand Color */
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #36281d;
+  transform: translateY(-2px);
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 50px;
+}
+
+.stats h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.stats p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* LOGIN PAGE LAYOUT */
+/* LOGIN PAGE */
+.login-page {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* LEFT IMAGE */
+.login-left {
+  width: 50%;
+  background: url('images/selling.jpg') center/cover no-repeat;
+}
+
+/* RIGHT SIDE */
+.login-right {
+  width: 50%;
+  background: #d4a373;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORM */
+.login-form {
+  width: 300px;
+}
+
+/* HEADING */
+.login-form h2 {
+  margin-bottom: 10px;
+  font-size: 32px;          /* 👈 increase size */
+  color: #0b3c8c;           /* 👈 navy blue (same as button) */
+  font-weight: bold;
+}
+
+/* SUBTITLE */
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* PASSWORD BOX */
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+/* BUTTON */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: #0b3c8c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-form button {
+  margin-top: 10px;
+}
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider span {
+  background: #d4a373;
+  padding: 0 10px;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  top: 50%;
+  left: 0;
+}
+
+.divider-small {
+  margin: 15px 0;
+  border-top: 1px solid #ffffff;
+}
+
+/* GOOGLE BUTTON */
+.google-btn {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+/* FORGOT */
+.forgot {
+  margin-top: 80px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* REGISTER */
+.register {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-btn {
+  background: #0b3c8c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.register {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.register-text {
+  font-size: 14px;
+}
+
+/* Smaller button */
+.register-btn {
+  background: #0b3c8c;
+  color: white;
+  border: none;
+  padding: 5px 10px;   /* 👈 smaller */
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+
+  width: auto;  
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.login-right {
+  position: relative;   /* 👈 IMPORTANT */
+}
+
+/* LOGO POSITION */
+.logo-corner {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 180px;   /* adjust size */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap');
+
+:root {
+  --bg-taupe: #baa98c; 
+  --text-white: #ffffff;
+  --text-dark: #333333;
+}
+
+body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #fff; overflow-x: hidden; }
+
+/* 1. Header & Logo Styling */
+.luxury-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 5%;
+  background-color: var(--bg-taupe);
+}
+
+.logo { 
+  font-family: 'Cormorant Garamond', serif; 
+  font-size: 42px; 
+  font-weight: 300; 
+  letter-spacing: 6px; 
+  color: var(--text-white);
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-white);
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 15px;
+  letter-spacing: 1px;
+}
+
+/* 1. The Rotating Badge Positioning */
+.rotating-badge.overlay-badge {
+    position: absolute;
+    top: 10%; /* Sits high on the right side */
+    right: 28%; /* Overlaps the top-right corner of the image */
+    width: 120px;
+    height: 120px;
+    animation: rotateBadge 12s linear infinite;
+    z-index: 10;
+}
+
+@keyframes rotateBadge {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 2. The Right-Side Description Overlap */
+.hero-description.overlay-description {
+    position: absolute;
+    top: 45%; /* Vertically centered relative to the image */
+    right: 5%; /* Overlaps the right side of the image */
+    width: 380px; /* Keeps the text in a neat block */
+    color: var(--text-white);
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    text-align: left;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.1); /* Adds subtle readability */
+}
+
+/* 3. Hero Container Height Adjustment */
+.luxury-hero {
+    position: relative;
+    width: 100%;
+    height: 95vh; /* Slightly taller for more breathing room */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-taupe);
+    overflow: hidden;
+}
+
+/* 4. Left Heading Adjustment (No button needed now) */
+.serif-title.main-heading {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    font-size: 75px;
+    z-index: 10;
+}
+
+/* 2. Navigation & Dropdowns */
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; z-index: 100; }
+.nav-links li { position: relative; }
+.nav-links > li > a { text-decoration: none; color: var(--text-white); font-size: 13px; text-transform: uppercase; margin: 0 15px; letter-spacing: 1px; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  list-style: none;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-menu { display: block; }
+
+.dropdown-menu li a {
+  color: #333 !important;
+  padding: 10px 20px;
+  display: block;
+  text-transform: capitalize;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.dropdown-menu li a:hover { background-color: #f9f9f9; color: var(--bg-taupe) !important; }
+
+/* Show the menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 5px 0;
+}
+
+/* Keep the link color white for the main nav but black for dropdown */
+.nav-links > li > a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+/* 2. Hero Overlapping Layout */
+.luxury-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-taupe);
+}
+
+.hero-image-box {
+  width: 45%;
+  max-width: 550px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-main-image {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px;
+}
+
+/* Large Heading Position */
+.serif-title.main-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-white);
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  z-index: 2;
+  margin: 0;
+}
+
+.italic-serif { font-style: italic; }
+
+/* Description Overlay Position */
+.overlay-description {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  width: 350px;
+  color: var(--text-white);
+  font-size: 14px;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.overlay-button {
+  position: absolute;
+  top: 68%;
+  right: 8%;
+  z-index: 2;
+}
+
+.btn-outline {
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+  padding: 15px 45px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* 3. Category Grid */
+.section-padding { padding: 100px 10%; text-align: center; }
+.dark-text { color: var(--text-dark) !important; font-size: 3rem; margin-bottom: 40px; }
+
+.category-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.cat-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin: 15px 0 5px; }
+.cat-card img { width: 100%; }
+.btn-shop { background: none; border: 1px solid #333; padding: 10px; width: 100%; cursor: pointer; margin-top: 10px; }
+
+/* 5. Founder Section */
+.founder-section { display: flex; align-items: center; padding: 100px 10%; background: #f9f9f9; }
+.founder-img { flex: 1; padding-right: 50px; }
+.founder-img img { width: 100%; }
+.founder-text { flex: 1; }
+.founder-text p { font-size: 16px; line-height: 1.8; color: #1c1919; margin-bottom: 20px; }
+.founder-text strong { color: var(--bg-taupe); }
+.btn-filled { background: #bba889; color: #fff; padding: 15px 30px; text-decoration: none; display: inline-block; margin-top: 20px; }
+
+.founder-text p {
+    font-family: 'Montserrat', sans-serif; /* Standard, clean look */
+    font-size: 1.2rem;       /* Larger text (standard is usually 1rem) */
+    line-height: 1.8;        /* Increases spacing between lines for better reading */
+    color: #333333;          /* Solid dark grey for high contrast */
+    margin-bottom: 25px;     /* Spacing between the two paragraphs */
+    font-weight: 300;        /* Light weight for a modern, high-end feel */
+}
+
+.founder-text strong {
+    font-style: italic;
+    font-weight: 800;     
+    font-size: 1.4rem;   /* Makes the bold names (Craftora, Hiba Sk) pop */
+    color: #c5a67b; 
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease; /* Optional: uses your brand color for the names */
+}
+.founder-text strong:hover {
+    color: #000000;
+}
+
+/* --- CONTACT SECTION STYLING --- */
+.contact-section {
+    padding: 80px 10%;
+    background-color: #fdfaf7;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 3.5rem; 
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.contact-section p {
+    font-size: 2.0rem; /* Large "Have a question..." text */
+    color: #000000;
+    margin-bottom: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+}
+
+/* Grid Layout */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Individual Item Styling */
+.contact-item {
+    display: flex;
+    flex-direction: column; /* Stacks icon above text */
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.contact-item i {
+    font-size: 2.5rem; /* Large icons */
+    transition: 0.3s;
+}
+
+.contact-item span {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+/* --- ACTUAL APP BRAND COLORS --- */
+
+/* Gmail Red */
+.fa-envelope {
+    color: #EA4335 !important; 
+}
+
+/* Phone Green */
+.fa-phone {
+    color: #34A853 !important; 
+}
+
+/* Facebook Blue */
+.fa-facebook-f {
+    color: #1877F2 !important;
+}
+
+/* Instagram Gradient */
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    
+    /* Standard property */
+    background-clip: text; 
+    
+    /* Vendor prefixed versions for browser support */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    display: inline-block;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 900px) {
+  .luxury-hero, .founder-section { 
+    flex-direction: column; 
+    height: auto; 
+    text-align: center; 
+  }
+  .serif-title.main-heading { 
+    position: relative; 
+    font-size: 3.5rem; 
+    left: 0; 
+    margin-bottom: 30px; 
+    top: 0; 
+  }
+  .hero-description.overlay-description { 
+    position: relative; 
+    right: 0; 
+    width: 100%; 
+    margin-top: 20px; 
+    top: 0; 
+    color: #333; 
+  }
+  .category-grid-4 { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .hero-image-box { 
+    width: 90%; 
+  }
+  .contact-grid { 
+    gap: 30px; 
+  }
+  .contact-section p {
+    font-size: 1.5rem; /* Slightly smaller for mobile screens */
+  }
+}
+
+/* 5. Footer */
+.newsletter-footer { text-align: center; padding: 100px 10%; }
+.email-box { border-bottom: 1px solid #333; width: 350px; margin: 40px auto; display: flex; }
+.email-box input { border: none; padding: 10px; width: 100%; outline: none; }
+.email-box button { background: none; border: none; font-size: 20px; cursor: pointer; }
+
+/* Rotating Badge */
+.rotating-badge {
+    position: absolute;
+    top: 5%;
+    right: 32%;
+    width: 100px;
+    height: 100px;
+    animation: rotateBadge 12s linear infinite;
+    z-index: 3;
+}
+@keyframes rotateBadge { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Mobile View */
+@media (max-width: 900px) {
+  .luxury-hero, .founder-section { flex-direction: column; height: auto; text-align: center; }
+  .serif-title.main-heading { position: relative; font-size: 3.5rem; left: 0; margin-bottom: 30px; }
+  .overlay-description, .overlay-button { position: relative; right: 0; width: 100%; margin-top: 20px; }
+  .category-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .hero-image-box { width: 90%; }
+}
+
+/* Clickable Category Styling */
+.cat-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-card p {
+    color: var(--bg-taupe);
+    font-weight: bold;
+}
+
+/* Ensure the New Arrival matches the boutique spacing */
+.arrival-section {
+    background-color: #fdfdfd;
+    border-top: 1px solid #eee;
+}
+
+/* Dropdown Menu Styles */
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.dropdown { position: relative; }
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li { list-style: none; }
+.dropdown-menu a {
+    color: #333 !important;
+    padding: 10px 20px;
+    display: block;
+    font-size: 12px;
+}
+.dropdown-menu a:hover { background: #f5f5f5; }
+
+
+
+/* Product Card Hover for New Arrivals */
+.product-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+.arrival-section {
+    background-color: #fcfcfc; /* Slight contrast from the founder section */
+    border-top: 1px solid #f0f0f0;
+}
+/* Fix for New Arrival Image Sizes */
+.product-card img {
+    width: 100%;
+    height: 300px; /* Forces a consistent height for all 4 images */
+    object-fit: cover; /* Crops the image to fit the box perfectly without stretching */
+    display: block;
+    border-radius: 4px; /* Optional: adds a slight soft corner */
+    background-color: #f9f9f9; /* Fallback color if image is loading */
+}
+
+/* Adjust the grid for a cleaner look */
+.category-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+/* Ensure Dropdown is visible over elements below it */
+.luxury-nav {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Crochet page css */
+/* --- GOOGLE FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+/* --- VARIABLES --- */
+:root {
+  --julia-taupe: #baa98c;       /* The exact header/nav color */
+  --julia-bg-soft: #baa98c;    /* Softer variation for buttons */
+  --text-dark: #333333;
+  --text-grey: #666666;
+  --border-light: #eeeeee;
+}
+
+/* --- RESET & BASE --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* --- SHOP HEADER --- */
+.shop-header.julia-bg {
+  background-color: var(--julia-bg-soft);
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.shop-header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+.shop-header .subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* --- PRODUCT GRID --- */
+.product-grid {
+    display: grid;
+    /* This creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    /* This adds space between your 2 rows and 4 columns */
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px; /* Consistent height */
+  object-fit: cover; /* STRETCH FIX: Crops to fit instead of pulling */
+  display: block;
+  border-radius: 2px;
+}
+
+.product-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 20px 0 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 20px;
+}
+
+.btn-choose {
+  background: transparent;
+  border: 1px solid var(--text-dark);
+  padding: 12px 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-choose:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+/* --- MODAL SYSTEM --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 1000px;
+  max-width: 90%;
+  height: 80vh; /* Fixed height for scroll to work */
+  position: relative;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Left: Image */
+.modal-image-side {
+  flex: 1.2;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+.modal-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* STRETCH FIX */
+}
+
+/* Modal Right: Info & Scroll */
+.modal-info-side.custom-scroll {
+  flex: 1;
+  padding: 50px;
+  overflow-y: auto; /* SCROLL DOWN FIX */
+  text-align: left;
+}
+
+/* CUSTOM SCROLLBAR DESIGN */
+.modal-info-side.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--julia-taupe);
+  border-radius: 10px;
+}
+
+/* Modal Elements */
+.brand-tag { font-size: 14px; letter-spacing: 3px; color: #161010; text-transform: uppercase; }
+.modal-info-side h2 { font-size: 2.2rem; margin: 15px 0; }
+.price-tag { font-size: 24px; color: var(--text-dark); margin: 0; }
+.tax-info { font-size: 12px; color: #999; margin-bottom: 30px; }
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.material-options { margin-bottom: 25px; }
+
+.opt-btn {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 30px; /* Pill shape like Julia */
+  padding: 10px 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.opt-btn.active {
+  background: var(--text-dark);
+  color: #ffffff;
+  border-color: var(--text-dark);
+}
+
+.quantity-section { margin-bottom: 30px;}
+
+.quantity-box {
+  display: flex;
+  border: 1px solid #dddddd;
+  width: 130px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-box button {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn-add-cart {
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn-buy-now {
+  padding: 18px;
+  background: var(--julia-bg-soft);
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Trust Badges Checkboxes */
+.trust-badges {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.badge-item input[type="checkbox"] {
+  accent-color: var(--julia-taupe);
+}
+
+.product-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-top: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #999;
+  z-index: 100;
+}
+
+/* Responsive adjustment: 2 items per row on tablets, 1 on phones */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Home Decor --- */
+/* --- VARIABLES --- */
+:root {
+  --julia-taupe: #baa98c;       /* The exact header/nav color */
+  --julia-bg-soft: #baa98c;    /* Softer variation for buttons */
+  --text-dark: #333333;
+  --text-grey: #666666;
+  --border-light: #eeeeee;
+}
+
+/* --- RESET & BASE --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* --- SHOP HEADER --- */
+.shop-header.julia-bg {
+  background-color: var(--julia-bg-soft);
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.shop-header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+.shop-header .subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* --- PRODUCT GRID --- */
+.product-grid {
+    display: grid;
+    /* This creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    /* This adds space between your 2 rows and 4 columns */
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px; /* Consistent height */
+  object-fit: cover; /* STRETCH FIX: Crops to fit instead of pulling */
+  display: block;
+  border-radius: 2px;
+}
+
+.product-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 20px 0 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 20px;
+}
+
+.btn-choose {
+  background: transparent;
+  border: 1px solid var(--text-dark);
+  padding: 12px 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-choose:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+/* --- MODAL SYSTEM --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 1000px;
+  max-width: 90%;
+  height: 80vh; /* Fixed height for scroll to work */
+  position: relative;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Left: Image */
+.modal-image-side {
+  flex: 1.2;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+.modal-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* STRETCH FIX */
+}
+
+/* Modal Right: Info & Scroll */
+.modal-info-side.custom-scroll {
+  flex: 1;
+  padding: 50px;
+  overflow-y: auto; /* SCROLL DOWN FIX */
+  text-align: left;
+}
+
+/* CUSTOM SCROLLBAR DESIGN */
+.modal-info-side.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--julia-taupe);
+  border-radius: 10px;
+}
+
+/* Modal Elements */
+.brand-tag { font-size: 14px; letter-spacing: 3px; color: #161010; text-transform: uppercase; }
+.modal-info-side h2 { font-size: 2.2rem; margin: 15px 0; }
+.price-tag { font-size: 24px; color: var(--text-dark); margin: 0; }
+.tax-info { font-size: 12px; color: #999; margin-bottom: 30px; }
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.material-options { margin-bottom: 25px; }
+
+.opt-btn {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 30px; /* Pill shape like Julia */
+  padding: 10px 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.opt-btn.active {
+  background: var(--text-dark);
+  color: #ffffff;
+  border-color: var(--text-dark);
+}
+
+.quantity-section { margin-bottom: 30px;}
+
+.quantity-box {
+  display: flex;
+  border: 1px solid #dddddd;
+  width: 130px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-box button {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn-add-cart {
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn-buy-now {
+  padding: 18px;
+  background: var(--julia-bg-soft);
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Trust Badges Checkboxes */
+.trust-badges {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.badge-item input[type="checkbox"] {
+  accent-color: var(--julia-taupe);
+}
+
+.product-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-top: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #999;
+  z-index: 100;
+}
+
+/* Responsive adjustment: 2 items per row on tablets, 1 on phones */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Beaded Jewelry --- */
+/* --- VARIABLES --- */
+:root {
+  --julia-taupe: #baa98c;       /* The exact header/nav color */
+  --julia-bg-soft: #baa98c;    /* Softer variation for buttons */
+  --text-dark: #333333;
+  --text-grey: #666666;
+  --border-light: #eeeeee;
+}
+
+/* --- RESET & BASE --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* --- SHOP HEADER --- */
+.shop-header.julia-bg {
+  background-color: var(--julia-bg-soft);
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.shop-header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+.shop-header .subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* --- PRODUCT GRID --- */
+.product-grid {
+    display: grid;
+    /* This creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    /* This adds space between your 2 rows and 4 columns */
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px; /* Consistent height */
+  object-fit: cover; /* STRETCH FIX: Crops to fit instead of pulling */
+  display: block;
+  border-radius: 2px;
+}
+
+.product-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 20px 0 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 20px;
+}
+
+.btn-choose {
+  background: transparent;
+  border: 1px solid var(--text-dark);
+  padding: 12px 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-choose:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+/* --- MODAL SYSTEM --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 1000px;
+  max-width: 90%;
+  height: 80vh; /* Fixed height for scroll to work */
+  position: relative;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Left: Image */
+.modal-image-side {
+  flex: 1.2;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+.modal-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* STRETCH FIX */
+}
+
+/* Modal Right: Info & Scroll */
+.modal-info-side.custom-scroll {
+  flex: 1;
+  padding: 50px;
+  overflow-y: auto; /* SCROLL DOWN FIX */
+  text-align: left;
+}
+
+/* CUSTOM SCROLLBAR DESIGN */
+.modal-info-side.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--julia-taupe);
+  border-radius: 10px;
+}
+
+/* Modal Elements */
+.brand-tag { font-size: 14px; letter-spacing: 3px; color: #161010; text-transform: uppercase; }
+.modal-info-side h2 { font-size: 2.2rem; margin: 15px 0; }
+.price-tag { font-size: 24px; color: var(--text-dark); margin: 0; }
+.tax-info { font-size: 12px; color: #999; margin-bottom: 30px; }
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.material-options { margin-bottom: 25px; }
+
+.opt-btn {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 30px; /* Pill shape like Julia */
+  padding: 10px 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.opt-btn.active {
+  background: var(--text-dark);
+  color: #ffffff;
+  border-color: var(--text-dark);
+}
+
+.quantity-section { margin-bottom: 30px;}
+
+.quantity-box {
+  display: flex;
+  border: 1px solid #dddddd;
+  width: 130px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-box button {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn-add-cart {
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn-buy-now {
+  padding: 18px;
+  background: var(--julia-bg-soft);
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Trust Badges Checkboxes */
+.trust-badges {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.badge-item input[type="checkbox"] {
+  accent-color: var(--julia-taupe);
+}
+
+.product-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-top: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #999;
+  z-index: 100;
+}
+
+/* Responsive adjustment: 2 items per row on tablets, 1 on phones */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Beaded Jewelry Page --- */
+/* --- VARIABLES --- */
+:root {
+  --julia-taupe: #baa98c;       /* The exact header/nav color */
+  --julia-bg-soft: #baa98c;    /* Softer variation for buttons */
+  --text-dark: #333333;
+  --text-grey: #666666;
+  --border-light: #eeeeee;
+}
+
+/* --- RESET & BASE --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* --- SHOP HEADER --- */
+.shop-header.julia-bg {
+  background-color: var(--julia-bg-soft);
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.shop-header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+.shop-header .subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* --- PRODUCT GRID --- */
+.shop-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 60px 8%;
+}
+
+.product-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px; /* Consistent height */
+  object-fit: cover; /* STRETCH FIX: Crops to fit instead of pulling */
+  display: block;
+  border-radius: 2px;
+}
+
+.product-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 20px 0 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 20px;
+}
+
+.btn-choose {
+  background: transparent;
+  border: 1px solid var(--text-dark);
+  padding: 12px 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-choose:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+/* --- MODAL SYSTEM --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 1000px;
+  max-width: 90%;
+  height: 80vh; /* Fixed height for scroll to work */
+  position: relative;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Left: Image */
+.modal-image-side {
+  flex: 1.2;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+.modal-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* STRETCH FIX */
+}
+
+/* Modal Right: Info & Scroll */
+.modal-info-side.custom-scroll {
+  flex: 1;
+  padding: 50px;
+  overflow-y: auto; /* SCROLL DOWN FIX */
+  text-align: left;
+}
+
+/* CUSTOM SCROLLBAR DESIGN */
+.modal-info-side.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.modal-info-side.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--julia-taupe);
+  border-radius: 10px;
+}
+
+/* Modal Elements */
+.brand-tag { font-size: 14px; letter-spacing: 3px; color: #161010; text-transform: uppercase; }
+.modal-info-side h2 { font-size: 2.2rem; margin: 15px 0; }
+.price-tag { font-size: 24px; color: var(--text-dark); margin: 0; }
+.tax-info { font-size: 12px; color: #999; margin-bottom: 30px; }
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.material-options { margin-bottom: 25px; }
+
+.opt-btn {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 30px; /* Pill shape like Julia */
+  padding: 10px 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.opt-btn.active {
+  background: var(--text-dark);
+  color: #ffffff;
+  border-color: var(--text-dark);
+}
+
+.quantity-section { margin-bottom: 30px;}
+
+.quantity-box {
+  display: flex;
+  border: 1px solid #dddddd;
+  width: 130px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-box button {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn-add-cart {
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn-buy-now {
+  padding: 18px;
+  background: var(--julia-bg-soft);
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Trust Badges Checkboxes */
+.trust-badges {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.badge-item input[type="checkbox"] {
+  accent-color: var(--julia-taupe);
+}
+
+.product-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-top: 30px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #999;
+  z-index: 100;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .shop-products { grid-template-columns: repeat(2, 1fr); }
+  .modal-content { flex-direction: column; width: 95%; height: 90vh; }
+  .modal-body { flex-direction: column; }
+  .modal-image-side { height: 300px; flex: none; }
+}
+
+@media (max-width: 600px) {
+  .shop-products { grid-template-columns: 1fr; }
+  .shop-header h1 { font-size: 2.5rem; }
+}
+
+/* --- Cart open --- */
+/* 1. This keeps the cart hidden off-screen to the right */
+/* --- CART SIDEBAR BASE --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Hidden by default */
+    width: 400px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 2000; /* Higher than overlay */
+    display: flex;
+    flex-direction: column;
+}
+
+/* THE "OPEN" TRIGGER - Use this in your JS */
+.cart-sidebar.open {
+    right: 0 !important;
+}
+
+/* BACKGROUND OVERLAY */
+
+/* BACKGROUND OVERLAY (Glass effect) */
+.cart-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Slightly lighter for better blur visibility */
+    
+    /* THE MAGIC LINES */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); /* Required for Safari support */
+    
+    z-index: 1500;
+}
+
+/* THE DELETE 'X' BUTTON */
+.cart-remove-btn {
+    color: #cc0000; /* Subtle red for delete */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Much bigger */
+    padding: 10px;   /* Larger click area */
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s;
+}
+
+.cart-remove-btn:hover {
+    color: #000;
+    transform: scale(1.2); /* Pops when hovered */
+}
+
+/* 1. HEADER SECTION */
+.cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.cart-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    color: #4A3728;
+}
+
+.close-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+}
+
+/* 2. BODY SECTION (Scrollable) */
+.cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-item-details h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.cart-item-details p {
+    color: #9e917a; /* Julia Taupe */
+    font-weight: 500;
+}
+
+.empty-cart-msg {
+    text-align: center;
+    padding: 50px 20px;
+    color: #B2A691;
+    font-style: italic;
+}
+
+/* 3. FOOTER SECTION (Sticky) */
+.cart-footer {
+    padding: 25px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 16px;
+    background: #4A3728; /* Your brand Taupe */
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background: #36281d;
+}
+
+/* ICON WRAPPER IN NAVBAR */
+/* Moves the icon back to the top-right corner */
+.cart-icon-wrapper {
+    position: absolute; /* Or fixed, depending on your nav setup */
+    right: 30px;
+    top: 25px;
+    cursor: pointer;
+    font-size: 26px;
+    color: #4A3728; /* Your brand Taupe */
+    transition: transform 0.2s ease, color 0.3s;
+    z-index: 1001;
+}
+
+.cart-icon-wrapper:hover {
+    color: #9e917a;
+    transform: scale(1.1); /* Slight pop effect on hover */
+}
+
+/* Fixes the click issue: makes the icon 'transparent' to clicks */
+.cart-icon-wrapper i {
+    pointer-events: none; 
+}
+
+/* The notification badge */
+#cartCount {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #4A3728;
+    color: white;
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: 2px solid #fff; /* Makes the badge pop against the icon */
+}
+
+/* MOBILE ADJUSTMENT */
+@media (max-width: 480px) {
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+/* BLUR EFFECT PREPARATION */
+.craftora-luxury-site {
+    transition: filter 0.4s ease; /* Smooth blur transition */
+}
+
+
