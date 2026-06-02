@@ -88,7 +88,7 @@ Craftora/
 ![Products](Static/Images/item.png)
 
 ### 🛒 Shopping Cart
-![Cart](Static/Imagesimages/cart.png)
+![Cart](Static/Images/cart.png)
 
 ### 💳 Checkout Page
 ![Checkout Page](Static/Images/checkout.png)
