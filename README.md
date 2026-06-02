@@ -76,31 +76,25 @@ Craftora/
 ## 📸 Screenshots
 
 ### 🏠 Homepage
-Showcases featured handmade products and provides an engaging shopping experience.
-![Homepage](images/homepage.png)
+![Homepage](Static/Images/homepage.png)
 
 ### 🔐 Login Page
-Allows users to securely access their accounts.
-![Login](images/login.png)
+![Login](Static/Images/login.png)
 
 ### 🛍️ Categories Page
-Displays a collection of handmade items with detailed information.
-![Products](images/categories.png)
+![Products](Static/Images/categories.png)
 
 ### 🛍️ Products Page
-![Products](images/item.png)
+![Products](Static/Images/item.png)
 
 ### 🛒 Shopping Cart
-Enables users to review and manage selected products before purchase.
-![Cart](images/cart.png)
+![Cart](Static/Imagesimages/cart.png)
 
 ### 💳 Checkout Page
-Provides a smooth checkout experience where users can review their order details and complete the purchase process.
-![Checkout Page](images/checkout.png)
+![Checkout Page](Static/Images/checkout.png)
 
 ### ✅ Order Success Page
-Displays a confirmation message after a successful purchase, providing users with assurance that their order has been placed successfully.
-![Order Success Page](images/success.png)
+![Order Success Page](Static/Images/success.png)
 
 ---
 
